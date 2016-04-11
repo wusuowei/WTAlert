@@ -13,6 +13,6 @@
 
 + (void)showAlertWithBuilder:(nonnull void(^)(WTAlertBuilder * _Nonnull builder))builderBlock;
 
-+ (void)showAlertFrom:(nonnull UIViewController *)viewController title:(nullable NSString *)title message:(nullable NSString *)message cancelButtonTitle:(nullable NSString *)cancelButtonTitle cancle:(nullable WTAlertActionBlock)cancle otherButtonTitle:(nullable NSString *)otherButtonTitle confirm:(nullable WTAlertActionBlock)confirm;
++ (void)showAlertFrom:(nonnull UIViewController *)viewController title:(nullable NSString *)title message:(nullable NSString *)message cancelButtonTitle:(nullable NSString *)cancelButtonTitle cancle:(nullable WTAlertActionBlock)cancle confirmButtonTitle:(nullable NSString *)confirmButtonTitle confirm:(nullable WTAlertActionBlock)confirm;
 
 @end

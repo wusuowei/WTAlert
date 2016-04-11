@@ -26,13 +26,13 @@ static NSMutableArray <WTAlertClickActionBlock> *_clickActionBlocks;
     
     WTAlertBuilder *builder = [[WTAlertBuilder alloc] init];
     builderBlock(builder);
-    [self showAlertFrom:builder.viewController title:builder.title message:builder.message cancelButtonTitle:builder.cancelTitle cancle:builder.cancelBlock otherButtonTitle:builder.confirmTitle confirm:builder.confirmBlock];
+    [self showAlertFrom:builder.viewController title:builder.title message:builder.message cancelButtonTitle:builder.cancelTitle cancle:builder.cancelBlock confirmButtonTitle:builder.confirmTitle confirm:builder.confirmBlock];
 }
 
-+ (void)showAlertFrom:(UIViewController *)viewController title:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle cancle:(WTAlertActionBlock)cancle otherButtonTitle:(NSString *)otherButtonTitle confirm:(WTAlertActionBlock)confirm {
++ (void)showAlertFrom:(UIViewController *)viewController title:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle cancle:(WTAlertActionBlock)cancle confirmButtonTitle:(NSString *)confirmButtonTitle confirm:(WTAlertActionBlock)confirm {
     
     NSParameterAssert(viewController);
-    NSAssert(cancelButtonTitle.length != 0 || otherButtonTitle.length != 0, @"cancel和conform不能同时为空");
+    NSAssert(cancelButtonTitle.length != 0 || confirmButtonTitle.length != 0, @"cancel和conform不能同时为空");
 
     if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:(title.length > 0 ? title : @"") message:message preferredStyle:UIAlertControllerStyleAlert];
@@ -45,8 +45,8 @@ static NSMutableArray <WTAlertClickActionBlock> *_clickActionBlocks;
             [alertController addAction:cancelAction];
         }
         
-        if (otherButtonTitle && otherButtonTitle.length > 0) {
-            UIAlertAction *otherAction = [UIAlertAction actionWithTitle:otherButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        if (confirmButtonTitle && confirmButtonTitle.length > 0) {
+            UIAlertAction *otherAction = [UIAlertAction actionWithTitle:confirmButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 if (confirm) {
                     confirm();
                 }
@@ -63,7 +63,7 @@ static NSMutableArray <WTAlertClickActionBlock> *_clickActionBlocks;
                     if (cancle != nil) {
                         cancle();
                     }
-                } else if (otherButtonTitle.length > 0) {
+                } else if (confirmButtonTitle.length > 0) {
                     if (confirm != nil) {
                         confirm();
                     }
@@ -75,7 +75,7 @@ static NSMutableArray <WTAlertClickActionBlock> *_clickActionBlocks;
             }
         };
         [_clickActionBlocks addObject:callbackBlock];
-        UIAlertView *titleAlert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitle, nil];
+        UIAlertView *titleAlert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:confirmButtonTitle, nil];
         [titleAlert show];
     }
 }
