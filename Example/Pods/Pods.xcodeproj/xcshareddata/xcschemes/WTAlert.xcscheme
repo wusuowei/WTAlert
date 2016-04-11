@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '04ACEB482F1654370CD790F5'
+               BlueprintIdentifier = 'BC14EF9FFE5B3C69DC3723C0'
                BlueprintName = 'WTAlert'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'WTAlert.framework'>
