@@ -9,8 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 WTAlert is available through [CocoaPods](http://cocoapods.org). To install
@@ -18,6 +16,35 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "WTAlert"
+```
+
+##show alert
+
+```object-c
+[WTAlert showAlertFrom:self title:@"This is normal title" message:@"This is normal message" cancelButtonTitle:@"cancel" cancle:^{
+    NSLog(@"I clicked normal cancel button");
+} confirmButtonTitle:@"confirm" confirm:^{
+    NSLog(@"I clicked normal confirm button");
+}];
+```
+
+or
+
+```object-c
+__weak typeof(self) weakSelf = self;
+[WTAlert showAlertWithBuilder:^(WTAlertBuilder * _Nonnull builder) {
+    builder.viewController = weakSelf;
+    builder.title = @"This is builder title";
+    builder.message = @"This is builer message";
+    builder.cancelTitle = @"cancel";
+    builder.cancelBlock = ^(){
+        NSLog(@"I clicked builder cancel button");
+    };
+    builder.confirmTitle = @"confirm";
+    builder.confirmBlock = ^(){
+        NSLog(@"I clicked builder confirm button");
+    };
+}];
 ```
 
 ## Author
