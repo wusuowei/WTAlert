@@ -17,7 +17,7 @@ typedef void(^WTAlertActionBlock)();
  *
  *  不能为空
  */
-@property (nonatomic, weak) UIViewController *viewController;
+@property (nonatomic, weak, nullable) UIViewController *viewController;
 /**
  *  alert标题
  */
