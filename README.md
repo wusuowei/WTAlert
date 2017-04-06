@@ -11,12 +11,19 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### CocoaPods
 WTAlert is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "WTAlert"
 ```
+
+### Carthage
+
+1. Add MBProgressHUD to your Cartfile. e.g., `github "wusuowei/WTAlert" ~> 0.1.1`
+2. Run `carthage update`
+3. Follow the rest of the [standard Carthage installation instructions](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) to add MBProgressHUD to your project.
 
 ##show alert
 
