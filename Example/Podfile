@@ -1,11 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'WTAlert_Example', :exclusive => true do
+target 'WTAlert_Example' do
   pod 'WTAlert', :path => '../'
 end
 
-target 'WTAlert_Tests', :exclusive => true do
+target 'WTAlert_Tests' do
+  inherit! :search_paths
   pod 'WTAlert', :path => '../'
 
   pod 'Specta'

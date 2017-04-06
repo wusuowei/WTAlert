@@ -1,15 +1,15 @@
 {
   "name": "WTAlert",
   "version": "0.1.0",
-  "summary": "A short description of WTAlert.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/WTAlert",
+  "summary": "You can use WTAlert show alert by class method.",
+  "description": "You can use WTAlert show alert by class method. That is simple.",
+  "homepage": "https://github.com/wusuowei/WTAlert",
   "license": "MIT",
   "authors": {
     "wentianen": "1206860151@qq.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/WTAlert.git",
+    "git": "https://github.com/wusuowei/WTAlert.git",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -21,5 +21,6 @@
     "WTAlert": [
       "Pod/Assets/*.png"
     ]
-  }
+  },
+  "public_header_files": "Pod/Classes/**/*.h"
 }
