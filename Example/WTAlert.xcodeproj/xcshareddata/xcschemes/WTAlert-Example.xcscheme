@@ -38,6 +38,16 @@
                ReferencedContainer = "container:WTAlert.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C5EA2B341E966F9F00032E78"
+               BuildableName = "WTAlertTests.xctest"
+               BlueprintName = "WTAlertTests"
+               ReferencedContainer = "container:WTAlert.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
