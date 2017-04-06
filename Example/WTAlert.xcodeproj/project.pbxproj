@@ -27,9 +27,9 @@
 		C5EA2B3D1E966F9F00032E78 /* WTAlertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EA2B3C1E966F9F00032E78 /* WTAlertTests.m */; };
 		C5EA2B421E966F9F00032E78 /* WTAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EA2B2D1E966F9F00032E78 /* WTAlert.framework */; };
 		C5EA2B431E966F9F00032E78 /* WTAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5EA2B2D1E966F9F00032E78 /* WTAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C5EA2B521E96702D00032E78 /* WTAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = C5EA2B4D1E96702D00032E78 /* WTAlert.h */; };
+		C5EA2B521E96702D00032E78 /* WTAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = C5EA2B4D1E96702D00032E78 /* WTAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5EA2B531E96702D00032E78 /* WTAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EA2B4E1E96702D00032E78 /* WTAlert.m */; };
-		C5EA2B541E96702D00032E78 /* WTAlertBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C5EA2B4F1E96702D00032E78 /* WTAlertBuilder.h */; };
+		C5EA2B541E96702D00032E78 /* WTAlertBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C5EA2B4F1E96702D00032E78 /* WTAlertBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5EA2B551E96702D00032E78 /* WTAlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EA2B501E96702D00032E78 /* WTAlertBuilder.m */; };
 /* End PBXBuildFile section */
 
